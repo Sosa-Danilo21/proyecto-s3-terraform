@@ -1,0 +1,281 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1c2e45;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+.header {
+  min-height: 85px;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #142c49;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.logo small {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.logo-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 10px;
+  background: #2385d1;
+  font-size: 27px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #63b7f2;
+}
+
+.hero {
+  min-height: 490px;
+  padding: 85px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: linear-gradient(120deg, #f3f7fc, #e3edf8);
+}
+
+.hero-content {
+  max-width: 580px;
+}
+
+.eyebrow {
+  color: #1976bd;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 15px 0;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.12;
+  color: #142c49;
+}
+
+.hero-content p {
+  max-width: 500px;
+  margin-bottom: 28px;
+  color: #52647a;
+  font-size: 17px;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 23px;
+  border-radius: 7px;
+  background: #1976bd;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  background: #125b94;
+  transform: translateY(-2px);
+}
+
+.hero-decoration {
+  width: 290px;
+  min-height: 290px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #d3e5f5;
+}
+
+.decoration-card {
+  width: 220px;
+  padding: 28px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 12px 35px #142c4920;
+}
+
+.decoration-card span,
+.number {
+  color: #2385d1;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.decoration-card strong {
+  display: block;
+  margin: 12px 0;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #142c49;
+}
+
+.decoration-card p {
+  color: #65758a;
+  font-size: 13px;
+}
+
+.services {
+  padding: 75px 9%;
+}
+
+.section-heading {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.section-heading h2,
+.contact h2 {
+  margin: 10px 0;
+  color: #142c49;
+  font-size: 32px;
+}
+
+.section-heading p {
+  color: #65758a;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  padding: 30px;
+  border: 1px solid #e5edf5;
+  border-radius: 10px;
+  background: #f8fafd;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px #142c4912;
+}
+
+.service-card h3 {
+  margin: 12px 0;
+  color: #142c49;
+  font-size: 21px;
+}
+
+.service-card p {
+  color: #65758a;
+  font-size: 14px;
+}
+
+.contact {
+  margin: 20px 9% 70px;
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-radius: 12px;
+  background: #142c49;
+}
+
+.contact h2 {
+  color: white;
+}
+
+.button-light {
+  background: #2385d1;
+  white-space: nowrap;
+}
+
+footer {
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  background: #0e2036;
+  color: #d6e0eb;
+  font-size: 13px;
+}
+
+.footer-logo {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 60px 8%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-decoration {
+    align-self: center;
+    width: 250px;
+    min-height: 250px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact {
+    padding: 30px;
+  }
+}
